@@ -48,8 +48,8 @@ def search_and_summarize_all(query):
     full_summary = ''
     for result_info in results_info:
         
-        full_summary += "Content Summary: {}\n".format(generate_content_summary(result_info['url']).replace('\n', '<br>'))
-        full_summary+="</br>"
+        full_summary = "\n\nContent Summary: {}\n".format(generate_content_summary(result_info['url']).replace('\n', '<br>'))
+        result_info['content']=full_summary 
     
 
     # Display the full summary
